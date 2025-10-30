@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    /*五種選擇器的優先順序寫法*/
+        body{
+            color: coral;
+        }
+
+        #a1{
+            color: hwb(0 0% 0%);
+        }
+        .b1{color: aqua;}
+        .b2{color: blue;}
+
+        .c1{
+            color: #008b5a!important;
+        }
+        /* div{
+            color: gold!important;
+            opacity: 0.2;
+        } */
+        /*元素選擇器，控制三個div，但color為重複屬性，權重最小，無法改變div
+        opacity則為不重複的屬性，可改變三個div的透明度*/
+    </style>
+</head>
+<body>
+    <div id="a1" class="c1" style="color: burlywood;">我是 a1</div>
+    <!-- 選擇器權重"style > #a1 > .c1" -->
+    <div class="b1">
+        我是b1
+        <div>我是b1的兒子</div>
+    </div>
+
+    <div class="b2"> b2</div>
+</body>
+</html>
