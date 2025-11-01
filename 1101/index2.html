@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 盒子模型2</title>
+    <style>
+        .box1{
+            border: 1px solid red;
+            margin-right: 33px;
+        }
+        .box2{
+            border: 1px solid green;   
+            /* padding: 10px; 速寫上下左右內距 */
+            padding-top: 10px;
+            padding-bottom: 10px
+        }
+        .box2 .box2_inner{
+            border: 1px solid orange;
+            
+        }
+        .box3{
+            border:1px solid burlywood;
+            width: 100px;
+            margin-top: 5px;
+            padding: 10px;
+        }
+        .box3 .a{
+            border:1px solid burlywood;
+        }
+        .box3 .b{
+            border:1px solid burlywood;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <h1>CSS切版練習</h1>
+    <span class="box1">span</span>
+    <span class="box2">
+        <span class="box2_inner">span</span>
+    </span>
+    <div class="box3">
+        <span class="a">a is for apple</span>
+        <span class="b">b</span>
+    </div>
+</body>
+</html>
