@@ -12,10 +12,11 @@ html {
     box-sizing: inherit;
 }
 
+/* index的CSS */
 .main{
     width: 100%;
     max-width: 900px;
-    border:1px solid rgb(119, 100, 73);
+    /* border:1px solid rgb(119, 100, 73); */
     margin: 0 auto;
     
 } 
@@ -66,4 +67,73 @@ html {
     width: 100%;
     display: block;
     margin: 0 auto;
+}
+
+.footer{
+    background-color: #999209;
+    height: 80px;
+    padding: 20px;
+}
+.footer>a{
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.footer>a:hover{
+    text-decoration: underline;
+}
+.footer> .certify{
+    display: inline;
+    float: right;
+    color: white;
+}
+
+/* shop.html的CSS */
+.item{
+    border: 1px solid #999209;
+    padding: 10px;
+}
+.shop_content>.item>.item_left{
+    display: inline-block;
+    width: 20%;
+    
+}
+.shop_content>.item>.item_left img{
+    width: 100%;
+}
+.shop_content>.item>.item_mid{
+    display: inline-block;
+    width: 40%;
+    margin-right: -4px;
+    vertical-align: top;
+}
+.shop_content>.item>.item_right{
+    display: inline-block;
+    width: 40%;
+    margin-right: -4px;
+    vertical-align: top;
+}
+.shop_content>.item>.item_right .item_set1_left{
+    display: inline-block;
+    width: 48%;
+}
+.item_set1_left_price {
+    color: #999209 ;
+}
+.shop_content>.item>.item_right .item_set1_right{
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+}
+.shop_content>.item>.item_right .item_set2_left{
+    display: inline-block;
+    width: 48%;
+}
+.item_set2_left_price {
+    color: #999209 ;
+}
+.shop_content>.item>.item_right .item_set2_right{
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
 }
