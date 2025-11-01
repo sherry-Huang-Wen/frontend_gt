@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS盒子模型4</title>
+    <title>CSS盒子模型4-1</title>
     <style>
         .box1{
             background-color: aqua;
@@ -11,21 +11,23 @@
             height: 100px;  /*元素內容超出其容器時*/
             overflow-y: scroll; /*顯示方式*/
 
-            box-shadow: -55px 37px 0px 0px rgba(253, 6, 6, 0.44);
-            -webkit-box-shadow: -55px 37px 0px 0px rgba(0,0,0,0.44);
-            -moz-box-shadow: -55px 37px 0px 0px rgba(0,0,0,0.44);
-        }
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
         .box2{
             width: 100px;
             height: 100px;
             background-color: rgb(74, 148, 214);
-            margin-top: 50px;
+            margin-top: 10px;
             border-radius: 40px;
         }
     </style>
 </head>
 <body>
-    <h1>CSS常用屬性</h1>
+    <h1>CSS屬性1</h1>
+        <h2><span><a href="index4-2.html">CSS屬性2</a></span></h2>
+    1.overflow
     <div class="box1">
         11 <br>
         22 <br>
@@ -39,7 +41,8 @@
         22 <br>
         33 <br>
         44 <br>
-    </div>
+    </div><br>
+    2.radius圓邊
     <div class="box2">box2</div>
 </body>
 </html>
