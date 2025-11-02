@@ -6,3 +6,5 @@
 
 * [css border](https://www.w3schools.com/css/css_border.asp)
 * [css box shadow](https://cssgenerator.org/box-shadow-css-generator.html)
+* CSS reset, main(box-sizing)
+* [CSS Can I use ...](https://caniuse.com/?search=text-align)
