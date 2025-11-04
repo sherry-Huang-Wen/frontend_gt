@@ -1,0 +1,42 @@
+/*flex footer寫法2 取代margin-left:auto */
+footer>.main{
+    display: flex;
+}
+footer>.main>ul{
+    display: flex;
+    gap: 10px;
+    flex:1;    /* .............. */
+}
+footer>.main>ul>li>a{
+    color: white;
+    text-decoration: none;
+}
+footer>.main>ul>li>a:hover{
+    text-decoration: underline;
+}
+footer>.main .certify{
+    flex:1; /* .............. */
+    text-align: right;/* .............. */
+    color: white;
+}
+
+/*flex footer寫法3 取代margin-left:auto */
+footer>.main{
+    display: flex;
+    justify-content: space-between;/* .............. */
+    /*align-items: center;   補充:垂直置中*/
+}
+footer>.main>ul{
+    display: flex;
+    gap: 10px;
+}
+footer>.main>ul>li>a{
+    color: white;
+    text-decoration: none;
+}
+footer>.main>ul>li>a:hover{
+    text-decoration: underline;
+}
+footer>.main .certify{
+    color: white;
+}

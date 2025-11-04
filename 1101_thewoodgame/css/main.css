@@ -74,38 +74,48 @@ html {
     margin: 0 auto;
 }
 
-.footer{
+footer{
     background-color: #999209;
     height: 100px;
     padding: 20px;
-    margin-top: 10px;
+}
+/* flex footer寫法1 */
+footer>.main{
     display: flex;
 }
-.footer>nav>ul{
+footer>.main>ul{
     display: flex;
+    gap: 10px;   
 }
-.footer>nav a{
+footer>.main>ul>li>a{
     color: white;
     text-decoration: none;
-    margin-right: 10px;
 }
-.footer>nav a:hover{
+footer>.main>ul>li>a:hover{
     text-decoration: underline;
 }
-.footer> .certify{
+footer>.main .certify{
     margin-left: auto;
     color: white;
 }
 
 /* shop.html的CSS: flex寫法 */
-.shop_content>p{
+.shop_p{
     letter-spacing: 2px;
 }
+.shop_content{
+    margin-bottom: 20px;
+}
+
 .shop_content>.item{
     display: flex;
     border: 1px solid #999209;
+    border-bottom: none;
     padding: 10px;
     gap: 10px;
+}
+.shop_content>.item:last-child{
+    border-bottom: 1px solid #999209;
 }
 .shop_content>.item>.item_left{
     width: 20%;
@@ -131,25 +141,23 @@ html {
 .shop_content>.item>.item_right{
     width: 40%;
 }
-.shop_content>.item>.item_right .item_title{
+.shop_content>.item>.item_right>.item_title{
     font-weight: bold;
     border-bottom: 1px solid #999209;
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
-.shop_content>.item>.item_right .item_set1{
+.shop_content>.item>.item_right>.item_set{
     display: flex;
     margin-bottom: 10px;
 }
-.shop_content>.item>.item_right>.item_set1>.item_set1_left{
+.item_set>.item_set_left{
     margin-right: auto;
 }
-
-.shop_content>.item>.item_right .item_set2{
-    display: flex;
-}
-.shop_content>.item>.item_right>.item_set2>.item_set2_left{
-    margin-right: auto;
+.item_set .item_set_left_price{
+    color: #999209 ;
+    margin-bottom: 5px;
+    font-size: 20px;
 }
 .buy_btn{
     text-decoration: none;
@@ -157,4 +165,26 @@ html {
     color: white;
     padding: 4px;
     border-radius: 10px;
+    font-size: 20px;
+}
+
+@media(max-width:992px){
+    .shop_content>.item{
+        flex-direction: column;
+    } 
+    .shop_content>.item>.item_left,
+    .shop_content>.item>.item_mid,
+    .shop_content>.item>.item_right{
+    width: 100%;
+    }  
+    footer>.main{
+        flex-direction: column;
+    }
+    footer>.main>ul{
+        margin: auto;
+    }
+    footer>.main .certify{
+        margin: auto;
+        margin-top: 20px;
+    }
 }
