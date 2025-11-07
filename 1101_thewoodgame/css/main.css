@@ -89,7 +89,9 @@ html {
 .main>nav>ul>li .text_en{
     color: #999209;
 }
-
+.main>.content{
+    margin-bottom: 20px;
+}
 .main>.content img{
     width: 100%;
     display: block;
@@ -104,6 +106,7 @@ footer{
 /* flex footer寫法1 */
 footer>.main{
     display: flex;
+    font-weight: bold;
 }
 footer>.main>ul{
     display: flex;
@@ -189,7 +192,33 @@ footer>.main .certify{
     border-radius: 10px;
     font-size: 20px;
 }
+/* About.html */
+.about_content{
+    margin-bottom: 20px;
+    display: flex;
+}
+.about_content>.about_left{
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about_content>.about_left>img{
+    width: 300px;
+}
+.about_content>.about_left a{
+    text-decoration: none;
+    color: #999209;
+}
+.about_content>.about_left a:hover{
+    text-decoration: underline;
+}
+.about_content>.about_fb{
+    margin-left: auto;
+}
 
+/* RWD手機版設定 */
 @media(max-width:992px){
     .shop_content>.item{
         flex-direction: column;

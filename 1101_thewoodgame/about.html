@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,11 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v24.0&appId=APP_ID"></script>
     <div class="main">
         <header>
             <a href="index.html"><img class="logo" src="img/logo.png" alt=""></a>
@@ -24,7 +29,7 @@
                             <a href="products1.html">萬貓的慶典 <br> Festival of Thousand Cats</a>
                             <a href="products2.html">福爾摩斯大對決 <br> Holmes: Sherlock & Mycroft</a>
                         </div>
-                    </div>                  
+                    </div>
                 </li>
                 <li>
                     <a class="nav_item" href="shop.html"><span>商店</span> <span class="text_en">Shop</span></a>
@@ -32,12 +37,33 @@
             </ul>
         </nav>
         <div class="about_content">
-            about_content
+            <div class="about_left">
+                <img src="img/logo_img.png" alt="">
+                <p>我們出版美麗又好玩的遊戲！<br>
+                    We publish beautiful and extraordinary games!<br>
+                    Wir bringen tolle und schöne Spiele heraus!</p>
+                <div class="page">
+                    <h2>BGG官網</h2>
+                    <a href="https://boardgamegeek.com/boardgamepublisher/35831/the-wood-games">BoardGameGeek Page</a>
+                </div>
+                <div class="Contact">
+                    <h2>歡迎聯絡我們 Contact</h2>
+                    <a href="mailto:dasholzspiele@gmail.com">dasholzspiele@gmail.com</a>
+                </div>
+            </div>
+            <div class="about_fb">
+                <div class="fb-page" data-href="https://www.facebook.com/dasholzspiele" data-tabs="timeline"
+                    data-width="500px" data-height="300px" data-small-header="true" data-adapt-container-width="true"
+                    data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/dasholzspiele" class="fb-xfbml-parse-ignore"><a
+                            href="https://www.facebook.com/dasholzspiele">此木創遊 The Wood Games</a></blockquote>
+                </div>
+            </div>
         </div>
     </div>
-    <footer> 
+    <footer>
         <!-- 使用同個屬性main，套用CSS置中的設定 -->
-        <div class="main"> 
+        <div class="main">
             <ul>
                 <li><a href="https://www.Facebook.com">Facebook</a></li>
                 <li><a href="https://www.x.com">Twitter</a></li>
@@ -46,6 +72,7 @@
             </ul>
             <div class="certify">© 2017 此木創遊 The Wood Games</div>
         </div>
-    </footer>    
+    </footer>
 </body>
+
 </html>
