@@ -8,3 +8,6 @@
 * [css box shadow](https://cssgenerator.org/box-shadow-css-generator.html)
 * CSS reset, main(box-sizing)
 * [CSS Can I use ...](https://caniuse.com/?search=text-align)
+
+# 進階
+* [前後端分離](https://kevin8656.github.io/2019/10/03/20190930-dotnetcore3beginner-3/)
