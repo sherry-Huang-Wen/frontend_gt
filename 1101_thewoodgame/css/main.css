@@ -165,7 +165,7 @@ footer>.main .certify{
 .shop_content>.item>.item_right{
     width: 40%;
 }
-.shop_content>.item>.item_right>.item_title{
+.shop_content>.item>.item_right>.item_title,.products_content .item_title{
     font-weight: bold;
     border-bottom: 1px solid #999209;
     padding-bottom: 5px;
@@ -187,9 +187,10 @@ footer>.main .certify{
     text-decoration: none;
     background-color: #999209;
     color: white;
-    padding: 4px;
+    padding: 6px 8px;
     border-radius: 10px;
     font-size: 20px;
+    font-weight: bold;
 }
 /* About.html */
 .about_content{
@@ -217,6 +218,47 @@ footer>.main .certify{
 }
 .about_content>.about_fb{
     width: 30%;
+}
+/* 商品頁 producst.html CSS */
+.products_content{
+    display: flex;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.products_content>.left{
+    width: 60%;
+    margin-right: 20px;
+}
+.products_content>.left .img_show{
+    background-color: #999209;
+    width: 520px;
+    height: 380px;
+    /* background-size:100% 100%; */
+    margin-bottom: 12px;
+}
+.products_content>.left .img_list>div {
+    background-color: #999209;
+    width: 80px;
+    height: 60px;
+    margin-right: 4px;
+    display: inline-block;
+    /* background-size: 100% 100%; */
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.products_content>.left .img_list .active{
+    outline: 4px solid #999209;
+}
+.products_content>.right{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.products_content .item_title{
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 30px;
 }
 
 /* RWD手機版設定 */
