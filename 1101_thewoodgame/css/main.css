@@ -95,7 +95,6 @@ html {
 .main>.content img{
     width: 100%;
     display: block;
-    margin: 0 auto;
 }
 
 footer{
@@ -196,8 +195,10 @@ footer>.main .certify{
 .about_content{
     margin-bottom: 20px;
     display: flex;
+    width: 100%;
 }
 .about_content>.about_left{
+    width: 70%;
     font-weight: bold;
     font-size: 20px;
     display: flex;
@@ -205,7 +206,7 @@ footer>.main .certify{
     gap: 20px;
 }
 .about_content>.about_left>img{
-    width: 300px;
+    width: 50%;
 }
 .about_content>.about_left a{
     text-decoration: none;
@@ -215,7 +216,7 @@ footer>.main .certify{
     text-decoration: underline;
 }
 .about_content>.about_fb{
-    margin-left: auto;
+    width: 30%;
 }
 
 /* RWD手機版設定 */
