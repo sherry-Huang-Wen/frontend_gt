@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- decorative ocean SVG background (simple, CC0-like artwork) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="seaGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#aeeef7"/>
+      <stop offset="60%" stop-color="#7fdfe9"/>
+      <stop offset="100%" stop-color="#4fcadf"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#seaGrad)" />
+  <!-- gentle waves -->
+  <g opacity="0.06" fill="#ffffff">
+    <path d="M0 220 C150 180 300 260 450 220 C600 180 750 260 900 220 C1050 180 1200 260 1350 220 L1350 800 L0 800 Z"/>
+  </g>
+  <g opacity="0.06" transform="translate(0,40)">
+    <path d="M0 280 C200 240 400 320 600 280 C800 240 1000 320 1200 280 L1200 800 L0 800 Z" fill="#ffffff"/>
+  </g>
+  <!-- seabed shapes -->
+  <g transform="translate(0,560)">
+    <ellipse cx="200" cy="90" rx="420" ry="70" fill="#2e7a6b" opacity="0.18"/>
+    <ellipse cx="1000" cy="110" rx="380" ry="80" fill="#2a6e63" opacity="0.12"/>
+  </g>
+  <!-- simple fish silhouettes -->
+  <g fill="#ffffff" opacity="0.12" transform="translate(60,120)">
+    <path d="M120 60 q40 -20 80 0 q-40 20 -80 0 z M200 60 q20 -10 40 0 q-20 10 -40 0 z"/>
+  </g>
+  <g fill="#ffffff" opacity="0.08" transform="translate(420,180) scale(1.2)">
+    <path d="M120 60 q40 -20 80 0 q-40 20 -80 0 z M200 60 q20 -10 40 0 q-20 10 -40 0 z"/>
+  </g>
+  <!-- coral / decorative -->
+  <g transform="translate(80,620) scale(0.9)">
+    <path d="M20 40 C20 20,40 10,40 0 C60 10,60 40,60 60 C52 52,40 60,30 70 C18 82,12 82,0 70" fill="#ffb3c1" opacity="0.12"/>
+  </g>
+</svg>

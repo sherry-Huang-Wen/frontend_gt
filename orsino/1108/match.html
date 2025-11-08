@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>動物找一找</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap">
+			<link rel="stylesheet" href="match.css">
+</head>
+<body>
+	<!--
+		動物配對遊戲 (輕量單檔版)
+		- 風格：受 "動物方城市" 類型啟發，但未使用任何受版權保護或商標的內容
+		- 遊戲玩法：翻兩張牌，配對即消除，統計步數與計時，勝利畫面
+		- 使用說明：在本地打開此 `match.html`即可遊玩（不需要伺服器）
+	-->
+
+	<div class="container">
+		<header>
+			<div class="brand">
+				<div class="logo" aria-hidden>🐾</div>
+				<div>
+					<h1>動物找一找</h1>
+					<div class="meta">翻牌配對</div>
+				</div>
+			</div>
+
+			<div class="controls">
+				<div class="stats">
+					<div>步數: <strong id="moves">0</strong></div>
+					<div> • </div>
+					<div>配對: <strong id="matched">0</strong>/<span id="pairs">6</span></div>
+					<div> • </div>
+					<div>時間: <strong id="time">00:00</strong></div>
+				</div>
+				<button id="restart" class="btn" title="重新開始">重新開始</button>
+				<a href="index.html" class="btn" title="返回入口">返回入口</a>
+			</div>
+		</header>
+
+			<main>
+				<section class="board" id="board" aria-label="記憶配對遊戲版面">
+					<!-- cards filled by JS -->
+				</section>
+
+				<aside id="leaderboard" aria-label="排行榜" class="leaderboard">
+					<h3>排行榜</h3>
+					<ol id="scoresList">
+						<!-- populated by JS -->
+					</ol>
+					<div style="display:flex;gap:8px;margin-top:8px">
+						<button id="clearScores" class="btn">清除排行榜</button>
+					</div>
+				</aside>
+			</main>
+	</div>
+
+	<div class="overlay" id="overlay" role="dialog" aria-modal="true">
+			<div class="modal" id="modal">
+				<h2 id="winTitle">恭喜！你完成配對 🎉</h2>
+				<p id="winStats"></p>
+				<div style="display:flex;flex-direction:column;gap:8px;align-items:center;margin-top:12px">
+					<div style="display:flex;gap:8px;align-items:center">
+						<label for="playerName" style="font-size:14px;color:var(--muted)">玩家名稱</label>
+						<input id="playerName" type="text" placeholder="輸入名字" style="padding:6px 8px;border-radius:8px;border:1px solid #e3e7ea">
+						<button id="saveScore" class="btn">儲存成績</button>
+					</div>
+					<div style="display:flex;gap:8px">
+						<button id="playAgain" class="btn">再玩一次</button>
+						<button id="closeModal" class="btn">關閉</button>
+					</div>
+				</div>
+			</div>
+	</div>
+
+		<script src="match.js" defer></script>
+</body>
+</html>

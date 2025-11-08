@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>我的網頁入口</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+    body{font-family: 'Nunito', 'Noto Sans TC', system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:linear-gradient(180deg,#f7fbff 0%, #eef7f3 100%);color:#213543;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+    .map-wrap{width:100%;max-width:1000px;background:transparent;padding:18px}
+    h1{font-size:28px;margin:0 0 6px 0}
+    p.lead{color:#55656b;margin:0 0 12px 0}
+    /* zoo map styles */
+    .zoo-map{width:100%;border-radius:14px;overflow:hidden;border:6px solid #f0f6f2;box-shadow:0 18px 40px rgba(20,50,40,0.08);background:linear-gradient(180deg,#f7fbff,#eef7f3)}
+    .map-svg{display:block;width:100%;height:auto}
+  /* Zones (map areas) use a subtle fade on hover rather than scaling */
+  .zone{cursor:pointer;transition:opacity .18s ease, transform .14s ease;}
+  .zone:hover{opacity:0.86}
+  /* Ensure anchor hover targets the inner group too */
+  a.zone-link:hover .zone{opacity:0.86}
+    .legend{display:flex;gap:12px;flex-wrap:wrap;padding:12px;align-items:center}
+    .legend .item{background:#fff;padding:8px 10px;border-radius:8px;border:1px solid #e6f3ee;color:#2b5a4a}
+    a.zone-link{fill:transparent}
+    .cta{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:#ffd28b;color:#213543;text-decoration:none;font-weight:700}
+    @media(max-width:700px){h1{font-size:20px}}
+  </style>
+</head>
+</head>
+<body>
+  <div class="map-wrap">
+    <h1>歡迎來到動物園遊樂場</h1>
+    <p class="lead">點選地圖中的園區前往遊戲：配對園區與靶場。</p>
+
+    <div class="zoo-map" role="img" aria-label="動物園地圖">
+      <!-- Simple SVG zoo map with clickable zones -->
+      <svg class="map-svg" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+        <!-- background -->
+        <rect width="100%" height="100%" fill="url(#g)" />
+        <defs>
+          <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stop-color="#f7fbff"/>
+            <stop offset="100%" stop-color="#eef7f3"/>
+          </linearGradient>
+        </defs>
+
+        <!-- ponds and paths -->
+        <ellipse cx="160" cy="140" rx="120" ry="60" fill="#dff3e7" stroke="#cfe9da"/>
+        <path d="M0 300 C150 220, 300 220, 400 300 S700 380,1000 320" stroke="#e6efe9" fill="none" stroke-width="18" stroke-linecap="round"/>
+
+        <!-- Pairing Area (match) -->
+        <a href="match.html" class="zone-link" aria-label="進入配對園區">
+          <g class="zone" transform="translate(120,110)">
+            <rect x="0" y="0" width="240" height="160" rx="14" fill="#fff" stroke="#d1efe0"/>
+            <text x="120" y="46" font-size="28" text-anchor="middle" fill="#2b5a4a" font-weight="700">配對園區</text>
+            <text x="120" y="92" font-size="46" text-anchor="middle" fill="#4aa45a">🐾</text>
+            <text x="120" y="126" font-size="14" text-anchor="middle" fill="#557b6d">點選進入翻牌配對遊戲</text>
+          </g>
+        </a>
+
+        <!-- Shooter area -->
+        <a href="shooter.html" class="zone-link" aria-label="進入靶場">
+          <g class="zone" transform="translate(620,320)">
+            <rect x="0" y="0" width="260" height="160" rx="14" fill="#fff" stroke="#f4e0e9"/>
+            <text x="130" y="46" font-size="28" text-anchor="middle" fill="#6b3b51" font-weight="700">靶場</text>
+            <!-- inline SVG target icon replaces emoji -->
+            <svg x="100" y="64" width="60" height="60" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle cx="50" cy="50" r="48" fill="#fff" stroke="#f4e0e9" />
+              <circle cx="50" cy="50" r="36" fill="#ffecec" />
+              <circle cx="50" cy="50" r="24" fill="#ff7b7b" />
+              <circle cx="50" cy="50" r="10" fill="#ffdede" />
+              <circle cx="50" cy="50" r="4" fill="#ff3b3b" />
+            </svg>
+            <text x="130" y="126" font-size="14" text-anchor="middle" fill="#7b5160">點選進入射擊遊戲</text>
+          </g>
+        </a>
+
+        <!-- secondary attractions -->
+        <g class="zone" transform="translate(360,80)">
+          <circle cx="0" cy="0" r="28" fill="#fff" stroke="#f0d9e7"/>
+          <text x="0" y="6" font-size="18" text-anchor="middle">🍃</text>
+          <text x="40" y="6" font-size="14" fill="#6b6f6f">休憩區</text>
+        </g>
+
+      </svg>
+    </div>
+
+    <div class="legend">
+      <div class="item">配對園區 — 智力遊戲</div>
+      <div class="item">海底靶場 — 反射練習</div>
+      <div class="item">休憩區 — 觀賞</div>
+    </div>
+
+    <a class="cta" href="shooter.html">快速前往靶場</a>
+  </div>
+</body>
+</html>
+</html>
