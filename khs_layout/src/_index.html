@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+   	<link rel="stylesheet" href="scss/main.scss">
+</head>
+<body >
+    <header id="app" >
+        <nav :class="{ fixed: isFixed }">
+            <a v-if="!isFixed" class="logo" href="#">
+                <img class="pc" src="img/LOGO1.svg" alt="">
+                <img class="mobile" src="img/LOGO2.svg" alt="">
+            </a>
+            <a v-else class="logo" href="#">
+                <img class="pc" src="https://khsmusicweb.blob.core.windows.net/public/src/static/images/LOGO3.svg" alt="">
+                <img class="mobile" src="https://khsmusicweb.blob.core.windows.net/public/src/static/images/LOGO4.svg" alt="">
+            </a>
+            <ul id="navbarCollapse" class="nav_left navbar-collapse collapse">
+                <li>
+                    <a href="#">關於我們</a>
+                    <div class="nav_menu">
+                        <ol>
+                            <li><a href="#">公司簡介</a></li>
+                            <li><a href="#">集團大事紀</a></li>
+                            <li><a href="#">品牌故事</a></li>
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">最新消息</a>
+                    <div class="nav_menu">
+                        <ol>
+                            <li><a href="#">活動快訊</a></li>
+                            <li><a href="#">產品消息</a></li>
+                            <li><a href="#">音樂教育</a></li>
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">產品介紹</a>
+                    <div class="nav_menu">
+                        <ol>
+                            <li><a href="#">管樂器</a></li>
+                            <li><a href="#">弦樂器</a></li>
+                        </ol>
+                    </div>
+                </li>
+                <li><a href="#">音樂教育</a></li>
+                <li><a href="#">門市據點</a></li>
+                <li><a href="#">服務中心</a></li>
+            </ul>
+            <ul class="nav_right">
+                <li><a class="public_icon icon_facebook" href="#">facebook</a></li>
+                <li><a class="public_icon icon_youtube" href="#">youtube</a></li>
+                <li><a class="public_icon icon_line" href="#">line</a></li>
+            </ul>
+            <div class="nav_mobile" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="menu">
+                    <div class="line line0"></div>
+                    <div class="line_parent">
+                        <div class="line line1"></div>
+                        <div class="line line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav_search">搜尋</div>
+        </nav>
+          <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://picsum.photos/800/600?random=1" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://picsum.photos/800/600?random=2" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://picsum.photos/800/600?random=3" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://picsum.photos/800/600?random=4" />
+            </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="bottom_area">
+            <h1>全心灌溉熱愛音樂的幼苗</h1>
+            <p>功學社取自「貢獻」、「學校」、「社會」，我們希望用優質的樂器與熱誠的音樂教育，將藝術的種子散布在台灣各處，同時走向國際名揚台灣精神。</p>
+            <a href="#">關於我們</a>
+        </div>
+        <a class="go_down" href="#">down</a>
+    </header>
+    <main>
+        <section class="service">
+            <h2>
+                <div class="service_h2">
+                    <span>服務項目</span>
+                </div>
+            </h2>
+            <div class="service_parent">
+                 <div class="service_inner">
+                        <a href="/product">
+                         <div class="service_img">
+                             <div class="inner bg" style="background-image: url(//khsmusicweb.blob.core.windows.net/public/src/static/images/bg/bg-33.png)"></div>
+                         </div>
+                        </a>
+                        <div class="service_text">
+                             <div class="service_bg"></div>
+                             <div class="service_inner">
+                                 <h3><a href="/product">產品介紹</a></h3>
+                                 <p>鋼琴、電子琴、各種管樂器、弦樂器、打擊樂器及數位樂器之銷售及維修服務。</p>
+                             </div>
+                             <div class="service_more arrow_wrap">
+                                 <a href="/product">了解更多<span class="arrow"></span></a>
+                             </div>
+                        </div>
+                 </div>
+                 <div class="service_inner">
+                        <a href="/product">
+                         <div class="service_img zoom">
+                             <div class="inner bg" style="background-image: url(//khsmusicweb.blob.core.windows.net/public/src/static/images/bg/bg-33.png)"></div>
+                         </div>
+                        </a>
+                        <div class="service_text">
+                             <div class="service_bg"></div>
+                             <div class="service_inner">
+                                 <h3><a href="/product">產品介紹</a></h3>
+                                 <p>鋼琴、電子琴、各種管樂器、弦樂器、打擊樂器及數位樂器之銷售及維修服務。</p>
+                             </div>
+                             <div class="service_more arrow_wrap">
+                                 <a href="/product">了解更多<span class="arrow"></span></a>
+                             </div>
+                        </div>
+                 </div>
+            </div>
+        </section>
+        <section class="news" style="margin-bottom: 100px;">
+            <div class="container-lg">
+                <div class="row gy-4">
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="news_parent">
+                            <a href="/getNews?id=366">
+                              <div class="news_img zoom">
+                                <div class="inner">
+                                    <img src="https://picsum.photos/800/600?random=488" alt="">
+                                </div>
+                              </div>
+                            </a>
+                            <div class="news_area">
+                              <div class="area_button"><a href="/getNews?id=366">活動快訊</a></div>
+                              <div class="news_time"><span>八月 3, 2022</span></div>
+                            </div>
+                            <div class="news_text">
+                              <h3 style="height: 53px;overflow: hidden;"><a href="/getNews?id=366">彩繪你的鋼琴彩繪你的鋼琴彩繪你的鋼琴！ 音樂夢</a></h3>
+                              <p>無料！吹嘴體驗＆樂器健檢</p>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="news_parent">
+                            <a href="/getNews?id=366">
+                              <div class="news_img">
+                                  <img src="https://picsum.photos/800/600?random=454" alt="">
+                              </div>
+                            </a>
+                            <div class="news_area">
+                              <div class="area_button"><a href="/getNews?id=366">活動快訊</a></div>
+                              <div class="news_time"><span>八月 3, 2022</span></div>
+                            </div>
+                            <div class="news_text">
+                              <h3 style="height: 53px;overflow: hidden;"><a href="/getNews?id=366">彩繪你的鋼琴彩繪你的鋼琴彩繪你的鋼琴！ 音樂夢</a></h3>
+                              <p>無料！吹嘴體驗＆樂器健檢</p>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="news_parent">
+                            <a href="/getNews?id=366">
+                              <div class="news_img">
+                                  <img src="https://picsum.photos/800/600?random=766" alt="">
+                              </div>
+                            </a>
+                            <div class="news_area">
+                              <div class="area_button"><a href="/getNews?id=366">活動快訊</a></div>
+                              <div class="news_time"><span>八月 3, 2022</span></div>
+                            </div>
+                            <div class="news_text">
+                              <h3 style="height: 53px;overflow: hidden;"><a href="/getNews?id=366">彩繪你的鋼琴彩繪你的鋼琴彩繪你的鋼琴！ 音樂夢</a></h3>
+                              <p>無料！吹嘴體驗＆樂器健檢</p>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                       <div class="news_parent">
+                            <a href="/getNews?id=366">
+                              <div class="news_img">
+                                  <img src="https://picsum.photos/800/600?random=987" alt="">
+                              </div>
+                            </a>
+                            <div class="news_area">
+                              <div class="area_button"><a href="/getNews?id=366">活動快訊</a></div>
+                              <div class="news_time"><span>八月 3, 2022</span></div>
+                            </div>
+                            <div class="news_text">
+                              <h3 style="height: 53px;overflow: hidden;"><a href="/getNews?id=366">彩繪你的鋼琴彩繪你的鋼琴彩繪你的鋼琴！ 音樂夢</a></h3>
+                              <p>無料！吹嘴體驗＆樂器健檢</p>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-lg news_bottom">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="news_bottom_img zoom">
+                          <div class="inner">
+                            <img src="https://picsum.photos/800/600?random=6444" alt="">
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 custom-style">
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <div class="block_area">
+                                    <div class="area_button"><a href="/getNews?id=426">活動快訊</a></div>
+                                    <div class="block_time"><span>七月 12, 2023</span></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-10">
+                                <div class="block_text">
+                                    <h3 style="height: 53px;overflow: hidden;color: #f0f0f0;"><a href="/getNews?id=426">《練習生早點名》 幸運獲獎名單出爐囉!</a></h3>
+                                    
+                                    <p>在 籍 學 員 限 定 ~6/30<br>暑 期 音 樂 課 程 招 生 中</p>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+	      const { createApp } = Vue;
+        const App = {
+            data(){
+                return {
+                    isFixed: false
+                }
+            },
+					  mounted() {
+							window.addEventListener('scroll', this.handleScroll);
+						},
+					  methods: {
+							handleScroll() {
+								this.isFixed = window.scrollY > 100; // 當滾動超過 100px 時固定 header
+							}
+						}
+        }
+       const app = createApp(App);
+       const vm = app.mount("#app")
+
+		</script>
+    
+    
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        effect: "fade",
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        });
+    </script>
+</body>
+</html>
