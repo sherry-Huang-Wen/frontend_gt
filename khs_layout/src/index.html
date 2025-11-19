@@ -9,8 +9,12 @@
 <body>
     <header>
         <nav>
-            <a href="#"><img src="img/LOGO1.svg" alt=""></a>
-            <ul class="nav_left">
+            <a class="logo" href="#">
+                <img class="pc" src="img/LOGO1.svg" alt="">
+                <img class="mobile" src="img/LOGO2.svg" alt="">
+            </a>
+            <ul id="navbarCollapse" class="nav_left navbar-collapse collapse">
+                <!-- 屬性是bootstrap寫法，預設收合選單關閉，若點擊則維持打開 -->
                 <li>
                     <a href="#">關於我們</a>
                     <div class="nav_menu">
@@ -20,8 +24,6 @@
                             <li><a href="#">品牌故事</a></li>
                         </ol>
                     </div>
-            
-                    
                 </li>
                 <li><a href="#">最新消息</a></li>
                 <li><a href="#">產品介紹</a></li>
@@ -30,15 +32,25 @@
                 <li><a href="#">服務中心</a></li>
             </ul>
             <ul class="nav_right">
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Youtube</a></li>
-                <li><a href="#">Line</a></li>
+                <li><a class="public_icon icon_fb" href="https://www.facebook.com/KHSMusicCenter/?ref=mf">Facebook</a></li>
+                <li><a class="public_icon icon_yt" href="https://www.youtube.com/channel/UC_0dA8ZkyGdcZvc8hO0wtmQ?view_as=subscriber">Youtube</a></li>
+                <li><a class="public_icon icon_line" href="#">Line</a></li>
             </ul>
+            <div class="nav_mobile" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <div class="menu">
+                    <div class="line line0"></div>
+                    <div class="line_parent">
+                        <div class="line line1"></div>
+                        <div class="line line2"></div>
+                    </div>
+                </div>
+            </div>
             <div class="nav_search">搜尋</div>
         </nav>
         <div class="bottom_area">
             <h1>全心灌溉熱愛音樂的幼苗</h1>
-            <p>全心灌溉熱愛音樂的幼苗功學社取自「貢獻」、「學校」、「社會」，我們希望用優質的樂器與熱誠的音樂教育，將藝術的種子散布在台灣各處，同時走向國際名揚台灣精神。</p>
+            <p>功學社取自「貢獻」、「學校」、「社會」，我們希望用優質的樂器與熱誠的音樂教育，將藝術的種子散布在台灣各處，同時走向國際名揚台灣精神。</p>
             <a href="#">關於我們</a>
         </div>
         <a class="go_down" href="#">down</a>
